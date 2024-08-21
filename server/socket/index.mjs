@@ -1,10 +1,10 @@
-const express = require('express')
-const { Server } = require('socket.io')
-const http  = require('http')
-const getUserDetailsFromToken = require('../helpers/getUserDetailsFromToken')
-const UserModel = require('../models/UserModel')
-const { ConversationModel,MessageModel } = require('../models/ConversationModel')
-const getConversation = require('../helpers/getConversation')
+import express from 'express'
+import { Server } from'socket.io'
+import http from 'http'
+import getUserDetailsFromToken from '../helpers/getUserDetailsFromToken.mjs'
+import UserModel from '../models/UserModel.mjs'
+import { ConversationModel,MessageModel } from '../models/ConversationModel.mjs'
+import getConversation from '../helpers/getConversation.mjs'
 
 const app = express()
 
@@ -157,9 +157,4 @@ io.on('connection',async(socket)=>{
         console.log('disconnect user ',socket.id)
     })
 })
-
-module.exports = {
-    app,
-    server
-}
-
+export default {server,app};

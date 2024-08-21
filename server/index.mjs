@@ -1,11 +1,12 @@
-const express = require('express')
-const cors = require('cors')
-require('dotenv').config()
-const connectDB = require('./config/connectDB')
-const router = require('./routes/index')
-const cookiesParser = require('cookie-parser')
-const { app, server } = require('./socket/index')
+import express from 'express'
+import cors from 'cors'
+import dotenv from 'dotenv'
 
+import connectDB from "./config/connectDB.mjs"
+import router from './routes/index.mjs'
+import cookiesParser from 'cookie-parser'
+import {app,server} from './socket/index.mjs'
+dotenv.config()
 // const app = express()
 app.use(cors({
     origin : process.env.FRONTEND_URL,

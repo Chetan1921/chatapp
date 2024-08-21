@@ -1,6 +1,5 @@
-const getUserDetailsFromToken = require("../helpers/getUserDetailsFromToken")
-const UserModel = require("../models/UserModel")
-
+import getUserDetailsFromToken from "../helpers/getUserDetailsFromToken.mjs"
+import UserModel from "../models/UserModel.mjs"
 async function updateUserDetails(request,response){
     try {
         const token = request.cookies.token || ""
@@ -31,4 +30,4 @@ async function updateUserDetails(request,response){
     }
 }
 
-module.exports = updateUserDetails
+export default updateUserDetails;

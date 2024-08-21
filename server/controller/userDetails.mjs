@@ -1,4 +1,5 @@
-const getUserDetailsFromToken = require("../helpers/getUserDetailsFromToken")
+import  getUserDetailsFromToken  from "../helpers/getUserDetailsFromToken.mjs"
+
 
 async function userDetails(request,response){
     try {
@@ -17,5 +18,4 @@ async function userDetails(request,response){
         })
     }
 }
-
-module.exports = userDetails
+export default userDetails;

@@ -1,4 +1,4 @@
-const { ConversationModel } = require("../models/ConversationModel")
+import ConversationModel from '../models/ConversationModel.mjs'
 
 const getConversation = async(currentUserId)=>{
     if(currentUserId){
@@ -36,4 +36,4 @@ const getConversation = async(currentUserId)=>{
     }
 }
 
-module.exports = getConversation
+export default getConversation;

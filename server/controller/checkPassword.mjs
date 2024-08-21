@@ -1,6 +1,6 @@
-const UserModel = require("../models/UserModel")
-const bcryptjs = require('bcryptjs')
-const jwt = require('jsonwebtoken')
+import UserModel from '../models/UserModel.mjs'
+import bcryptjs from 'bcryptjs'
+import jwt from 'jsonwebtoken'
 
 async function checkPassword(request,response){
     try {
@@ -43,4 +43,4 @@ async function checkPassword(request,response){
     }
 }
 
-module.exports = checkPassword
+export default checkPassword;

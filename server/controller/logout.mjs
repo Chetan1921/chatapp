@@ -18,4 +18,4 @@ async function logout(request,response){
     }
 }
 
-module.exports = logout
+export default logout;

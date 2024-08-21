@@ -1,5 +1,4 @@
-const UserModel = require("../models/UserModel")
-
+import UserModel from '../models/UserModel.mjs'
 async function checkEmail(request,response){
     try {
         const { email } = request.body
@@ -27,4 +26,4 @@ async function checkEmail(request,response){
     }
 }
 
-module.exports = checkEmail
+export default checkEmail;

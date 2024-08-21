@@ -1,5 +1,4 @@
-const UserModel = require('../models/UserModel')
-
+import UserModel from "../models/UserModel.mjs"
 async function searchUser(request,response){
     try {
         const { search } = request.body
@@ -26,4 +25,4 @@ async function searchUser(request,response){
     }
 }
 
-module.exports = searchUser
+export default searchUser
